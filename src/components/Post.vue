@@ -3,13 +3,18 @@
     <img :src="post.image" alt="">
     <h1>{{post.title}}</h1>
     <h3>{{post.description}}</h3>
-    <h4>{{post.username}}</h4>
+    <h4 @click="userPosts">{{post.username}}</h4>
   </div>
 </template>
 
 <script>
 export default {
-    props:['post']
+    props:['post'],
+    methods:{
+        userPosts(){
+            this.$router.push('/userPosts/'+this.post.username)
+        }
+    },
 };
 </script>
 
