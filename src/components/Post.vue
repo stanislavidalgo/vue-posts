@@ -1,6 +1,6 @@
 <template>
   <div class="post">
-    <img :src="post.image" alt="">
+    <img @click="singlePost" :src="post.image" alt="">
     <h1>{{post.title}}</h1>
     <h3>{{post.description}}</h3>
     <h4 @click="userPosts">{{post.username}}</h4>
@@ -13,6 +13,9 @@ export default {
     methods:{
         userPosts(){
             this.$router.push('/userPosts/'+this.post.username)
+        },
+        singlePost(){
+            this.$router.push(`/singlePost/${this.post.username}/${this.post.id}`)
         }
     },
 };
