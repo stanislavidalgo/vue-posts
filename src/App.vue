@@ -45,18 +45,21 @@ input {
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  margin: 0 auto;
 }
 
 .inputForm button,.loginForm button{
   padding: 10px;
   font-size: 18px;
-  border: 3px solid #525f66;
   border-radius: 5px;
   background-color: #5bc34da4;
-  color: white;
+  color: rgb(29, 21, 21);
   margin: 5px;
   cursor: pointer;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
 }
 
 </style>

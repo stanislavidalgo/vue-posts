@@ -1,15 +1,13 @@
 <template>
-    <div class="loginForm">
-        <h3>Login</h3>
-        <input type="text" placeholder="username">
-        <input type="text" placeholder="password">
-        <button>Login</button>
-    </div>
+  <LoginUser/>
 </template>
 
 <script>
+import LoginUser from '@/components/LoginUser'
 export default {
-    
+    components:{
+        LoginUser,
+    }
 }
 </script>
 
