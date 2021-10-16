@@ -3,7 +3,7 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/register">Register</router-link> |
-      <router-link to="/">Login</router-link>
+      <router-link to="/login">Login</router-link>
     </div>
     <router-view />
   </div>
@@ -41,21 +41,22 @@ input {
   margin: 5px;
 }
 
-.inputForm {
+.inputForm,.loginForm {
   display: flex;
   flex-direction: column;
   max-width: 300px;
   margin: 0 auto;
 }
 
-.inputForm button {
+.inputForm button,.loginForm button{
   padding: 10px;
   font-size: 18px;
   border: 3px solid #525f66;
   border-radius: 5px;
-  background-color: #2c3e58;
+  background-color: #5bc34da4;
   color: white;
   margin: 5px;
   cursor: pointer;
 }
+
 </style>
