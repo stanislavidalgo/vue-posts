@@ -42,7 +42,7 @@ export default {
       }
       if (
         this.user.passwordOne !== this.user.passwordTwo ||
-        this.user.passwordOne.length < 3
+        this.user.passwordOne.length < 5
       ) {
         return (this.error =
           "passwords should match and be at least 3 symbols length");
@@ -53,14 +53,17 @@ export default {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(this.user)
-      }
+        body: JSON.stringify(this.user),
+      };
 
       fetch("http://167.99.138.67:1111/createaccount", options)
-       .then(response => response.json())
-       .then(data => {
-         console.log(data)
-       })
+        .then((response) => response.json())
+        .then((data) => {
+          this.error = data.message;
+          if (data.success) {
+            this.$router.push("/login");
+          }
+        });
     },
   },
 };

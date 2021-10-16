@@ -41,13 +41,13 @@ input {
   margin: 5px;
 }
 
-.inputForm,.loginForm {
+.inputForm{
   display: flex;
   flex-direction: column;
   max-width: 300px;
 }
 
-.inputForm button,.loginForm button{
+.inputForm button{
   padding: 10px;
   font-size: 18px;
   border-radius: 5px;
