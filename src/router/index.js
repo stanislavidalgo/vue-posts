@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Register from '@/views/Register.vue'
 import UserPosts from '@/views/UserPosts'
 import SinglePost from '@/views/SinglePost'
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/singlePost/:username/:id',
     name: 'Single Posts',
     component: SinglePost
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
   },
   
 ]
