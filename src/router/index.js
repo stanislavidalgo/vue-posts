@@ -5,6 +5,7 @@ import Register from '@/views/Register.vue'
 import Login from '@/views/Login.vue'
 import UserPosts from '@/views/UserPosts'
 import SinglePost from '@/views/SinglePost'
+import Profile from '@/views/Profile'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile
   },
   
 ]

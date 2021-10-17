@@ -43,6 +43,9 @@ export default {
         .then((res) => res.json())
         .then((data) => {
           this.error = data.message;
+          if (data.success) {
+            this.$router.push("/profile");
+          }
           console.log(data);
         });
     },
