@@ -6,6 +6,8 @@ import Login from '@/views/Login.vue'
 import UserPosts from '@/views/UserPosts'
 import SinglePost from '@/views/SinglePost'
 import Profile from '@/views/Profile'
+import CreatePost from '@/views/CreatePost'
+import EditPost from '@/views/EditPost'
 
 Vue.use(VueRouter)
 
@@ -39,6 +41,16 @@ const routes = [
     path: '/profile',
     name: 'Profile',
     component: Profile
+  },
+  {
+    path: '/create',
+    name: 'Create',
+    component: CreatePost
+  },
+  {
+    path: '/edit',
+    name: 'Edit',
+    component: EditPost
   },
   
 ]
