@@ -40,7 +40,7 @@ export default {
       };
 
       fetch("http://167.99.138.67:1111/login", options)
-        .then((res) => res.json())
+        .then((response) => response.json())
         .then((data) => {
           this.error = data.message;
           console.log(data);
@@ -48,10 +48,11 @@ export default {
             const saveUser = {
               name: this.user.name,
               secret: data.secretKey,
-            }
+            };
 
             localStorage.setItem("user", JSON.stringify(saveUser));
-            this.$router.push('/profile')          }
+            this.$router.push("/profile");
+          }
         });
     },
   },

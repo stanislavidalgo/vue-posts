@@ -31,8 +31,8 @@ export default {
 </script>
 
 <style scoped>
-.d-flex{
-    display: flex;
-    flex-wrap: wrap;
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>
