@@ -5,7 +5,7 @@
     <h3>{{ post.description }}</h3>
     <h4 @click="userPosts">{{ post.username }}</h4>
     <div v-if="myPost">
-      <button>EDIT</button>
+      <button @click="edit">EDIT</button>
       <button @click="del">DELETE</button>
     </div>
   </div>
@@ -50,6 +50,10 @@ export default {
           this.$router.go(this.$router.currentRoute);
         });
     },
+    edit(){
+      localStorage.setItem("editpost",JSON.stringify(this.post))
+      this.$router.push('/edit')
+    }
   },
 };
 </script>

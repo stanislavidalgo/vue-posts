@@ -5,7 +5,7 @@
       <input v-model="post.title" type="text" placeholder="username" />
       <input v-model="post.image" type="text" placeholder="image" />
       <input v-model="post.description" type="text" placeholder="description" />
-      <button @click="create">Create post</button>
+      <button @click="update">Update post</button>
       <h3 v-if="error.length > 0">
         {{ error }}
       </h3>
@@ -27,7 +27,7 @@ export default {
     };
   },
   methods: {
-    create() {
+    update() {
       const user = JSON.parse(localStorage.getItem("user"));
       this.post.secretKey = user.secret
 
@@ -48,7 +48,7 @@ export default {
         body: JSON.stringify(this.post),
       };
 
-      fetch("http://167.99.138.67:1111/createpost", options)
+      fetch("http://167.99.138.67:1111/updatepost", options)
         .then((response) => response.json())
         .then((data) => {
           this.error = data.message;
@@ -59,6 +59,13 @@ export default {
         });
     },
   },
+  created(){
+      const post = JSON.parse(localStorage.getItem('editpost'))
+      console.log(post);
+      
+
+      this.post = post;
+  }
 };
 </script>
 
