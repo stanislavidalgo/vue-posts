@@ -43,10 +43,15 @@ export default {
         .then((res) => res.json())
         .then((data) => {
           this.error = data.message;
-          if (data.success) {
-            this.$router.push("/profile");
-          }
           console.log(data);
+          if (data.success) {
+            const saveUser = {
+              name: this.user.name,
+              secret: data.secretKey,
+            }
+
+            localStorage.setItem("user", JSON.stringify(saveUser));
+            this.$router.push('/profile')          }
         });
     },
   },
